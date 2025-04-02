@@ -1,0 +1,85 @@
+{{ template "header.html" .}}
+
+<form class="test" method="post">
+    <h2 class="title">Тест для проверки skill</h2>
+    {{ if .res }}
+        <p style="color: greenyellow; margin-bottom: 10px;">{{.res}}</p>
+    {{end}}
+    {{ if .err }}
+        <p style="color: red; margin-bottom: 10px;">{{.err}}</p>
+    {{end}}
+    <div class="what">
+        <label for="what-1">Что такое Ethereum</label>
+        <select name="what-1" required>
+            <option value="value-1">Децентрализованная система</option>
+            <option value="value-2">Сервер</option>
+            <option value="value-3">Протокол</option>
+        </select>
+    </div>
+    <div class="what">
+        <label for="what-2">Что такое публичный ключ</label>
+        <select name="what-2" required>
+            <option value="value-1">Используется в криптографическом алгоритме</option>
+            <option value="value-2">Пароль от учетной записи пользователя</option>
+            <option value="value-3">Нужен для авторизации</option>
+        </select>
+    </div>
+    <div class="what">
+        <label for="what-3">Что такое частный ключ</label>
+        <select name="what-3" required>
+            <option value="value-1">используется в паре с публичным ключом для обеспечения шифрования и дешифрования</option>
+            <option value="value-2">используется в паре с публичным ключом для входа в учетную запись пользователя</option>
+            <option value="value-3">используется в паре с публичным ключом для авторизации</option>
+        </select>
+    </div>
+    <div class="what">
+        <label for="what-4">В чем разница между Ethereum и биткойн-блокчейном</label>
+        <select name="what-4" required>
+            <option value="value-1">Разница между биткойнами и Ethereum заключается в их подходе</option>
+            <option value="value-2">Разницы нет</option>
+            <option value="value-3">Разница в криптовалюте</option>
+        </select>
+    </div>
+    <div class="what">
+        <label for="what-5">Отличается ли блокчейн от банковской книги</label>
+        <select name="what-5" required>
+            <option value="value-1">Существенная разница между банковской книгой и блокчейном заключается в том, как они управляются</option>
+            <option value="value-2">Разницы нет</option>
+            <option value="value-3">Разница в платформе</option>
+        </select>
+    </div>
+    <div class="what">
+        <label for="what-6">Что такое публичный блокчейн</label>
+        <select name="what-6" required>
+            <option value="value-1">Он полностью децентрализован, где каждый может читать, писать и присоединяться</option>
+            <option value="value-2">Он полностью децентрализован, не каждый может читать, писать и присоединяться</option>
+            <option value="value-3">Не знаю</option>
+        </select>
+    </div>
+    <div class="what">
+        <label for="what-7">Что такое частный блокчейн</label>
+        <select name="what-7" required>
+            <option value="value-1">Он работает  под контролем центральной власти</option>
+            <option value="value-2">Он не работает  под контролем центральной власти</option>
+            <option value="value-3">Он разрешает доступ к блокчейну всем пользователям</option>
+        </select>
+    </div>
+    <div class="what">
+        <label for="what-8">Что такое федеративный блокчейн</label>
+        <select name="what-8" required>
+            <option value="value-1">Блокчейн, управляемый государством</option>
+            <option value="value-2">Блокчейн, управляемый группой</option>
+        </select>
+    </div>
+    <div class="what">
+        <label for="what-9">Каково основное преимущество блокчейна</label>
+        <select name="what-9" required>
+            <option value="value-1">Открытость государству</option>
+            <option value="value-2">Повышенная безопасность</option>
+            <option value="value-3">Пониженая безопасность</option>
+        </select>
+    </div>
+    <button class="but">Сохранить</button>
+</form>
+
+{{ template "footer.html" .}}

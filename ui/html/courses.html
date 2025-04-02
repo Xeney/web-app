@@ -1,0 +1,25 @@
+{{ template "header.html" .}}
+
+<!-- 
+    Сделать валидацию классов class="front" Role
+    Сделать валидацию классов class="easy"  Lvl
+    Сделать ссылки на каждый курс
+    Сделать добавление в избранное
+ -->
+
+<div class="courses">
+    {{ range .res }}
+    <div class="cours">
+        <h2 class="title">
+            <span class="{{.Role}}">#{{.Role}}</span> 
+            <span class="skill">Skill {{.Level_skill}}</span>
+            <span class="{{.Lvl}}">#{{.Lvl}}</span><br> 
+            {{.Name}}
+        </h2>
+        <p class="description">{{.Description}}</p>
+        <a class="but" href="/courses/{{.Id}}">Пройти</a>
+    </div>
+    {{ end }}
+</div>
+
+{{ template "footer.html" .}}

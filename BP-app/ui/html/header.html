@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ .IP_ADDR }}/style.css">
+    <link rel="shortcut icon" href="{{ .IP_ADDR }}/icon-light.svg" type="image/x-icon">
+    <title>BP | blockchain-plata | Обучение блокчейну</title>
+</head>
+<body>
+    <div id="about" class="modal">
+        <div class="content">
+            <h2 class="title">Образовательная платформа по блокчейн разработке</h2>
+            <p class="description">Разработчик: Варламов Дамир Алексеевич</p>
+            <p class="description">Язык программирования Go(Golang)</p>
+            <p class="description">Веб-Фреймворк Gin(Golang)</p>
+            <a class="but" href="#">Закрыть</a>
+        </div>
+    </div>
+    <div id="d-info" class="modal">
+        <div class="content">
+            <h2 class="title">Полезные источники</h2>
+            <p class="description">
+                <a href="https://metanit.com/python/" target="_blank">Metanit Python</a>
+                <a href="https://metanit.com/go/" target="_blank">Metanit Golang</a>
+                <a href="https://metanit.com/sql/" target="_blank">Metanit SQL</a>
+                <a href="http://htmlbook.ru/html" target="_blank">Справочник по HTML</a>
+                <a href="http://htmlbook.ru/samcss" target="_blank">Самоучитель по CSS</a>
+                <a href="https://cryptozombies.io/en/course/" target="_blank">CryptoZombie Solidity</a>
+            </p>
+            <a class="but" href="#">Закрыть</a>
+        </div>
+    </div>
+    <header class="header container">
+        <img width="100px" src="{{ .IP_ADDR }}/icon.svg" alt="logo">
+        <nav class="menu">
+            <div id="block1">
+                <a href="#d-info">|полезные-источники</a>
+                <a href="#about">|о-нас</a>
+            </div>
+            <div id="block2">
+                <a href="/">|главная</a>
+                <a href="/courses">|курсы</a>
+            </div>
+            <div id="block3">
+                {{ if .User }}
+                <a href="/lk">Личный кабинет</a>
+                <a href="/exit">Выйти</a>
+                {{else}}
+                <a href="/login">Войти</a>
+                {{end}}
+            </div>
+        </nav>
+        <hr>
+    </header>
+    <main class="main container bottom">

@@ -1,0 +1,64 @@
+{{ template "header.html" .}}
+
+<style>
+    .footer {
+        position: sticky;
+        bottom: -90px;
+    }
+</style>
+
+<div class="page-course">
+    <nav class="navigation">
+        <a href="#page-0">Введение</a>
+        <a href="#page-1">План обучения</a>
+        <a href="#page-2">Основы</a>
+        <a href="#page-3">Практика</a>
+        <a href="#page-4">Вывод</a>
+        <a href="#page-5">Что дальше?</a>
+    </nav>
+    <div class="page">
+        <div class="hello-block">
+            <div>
+                <span class="{{.data.Role}}">#{{.data.Role}}</span>
+                <span class="{{.data.Lvl}}">#{{.data.Lvl}}</span>
+                <span class="skill">#skill {{.data.Level_skill}}</span>
+            </div>
+            <h2 class="title">{{.data.Name}}</h2>
+            <p class="description">{{.data.Description}}</p>
+            <form method="post">
+                <input type="hidden" name="id" value="{{.data.Id}}">
+                <button class="but">Добавить в избранное</button>
+            </form>
+        </div>
+        <div id="page-0" class="page-text-block">
+            <a class="title" href="#page-0">Введение</a>
+            <p class="text">{{ .data.Block_1 }}</p>
+        </div>
+        <div id="page-1" class="page-text-block">
+            <a class="title" href="#page-1">План обучения</a>
+            <p class="text">{{ .data.Block_2 }}</p>
+        </div>
+        <div id="page-2" class="page-text-block">
+            <a class="title" href="#page-2">Основы</a>
+            <p class="text">{{ .data.Block_3 }}</p>
+        </div>
+        <div id="page-3" class="page-text-block">
+            <a class="title" href="#page-3">Практика</a>
+            <p class="text">{{ .data.Block_4 }}</p>
+        </div>
+        <div id="page-4" class="page-text-block">
+            <a class="title" href="#page-4">Вывод</a>
+            <p class="text">{{ .data.Block_5 }}</p>
+        </div>
+        <div id="page-5" class="page-text-block">
+            <a class="title" href="#page-5">Что дальше?</a>
+            <p class="text">
+                Предлагаю вам пройти следующие курсы по тематике <a style="display: inline-block;" href="/courses">{{.data.Role}}</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+{{ template "footer.html" .}}
